@@ -73,21 +73,25 @@ Copy these four files to your repository root:
 
 Fill in the `TODO:` placeholders, including your actual test and lint commands. If you already have an `AGENTS.md`, **merge rather than overwrite it**. Keep its numbered sections 1–7 because the debugging skill refers to them.
 
-**Claude Code:** It loads `CLAUDE.md`, not `AGENTS.md` directly. In the target project's `CLAUDE.md`, add this line (create the file if absent; keep any existing instructions):
+**Claude Code:** In v2.1.277 and later, with default settings, Claude Code reads `AGENTS.md` automatically when there is no `CLAUDE.md`, `.claude/CLAUDE.md`, or `CLAUDE.local.md` in the project or a parent directory. If any of those files exists, it uses that Claude instruction file instead of `AGENTS.md` by default. In that case, import `AGENTS.md` by adding this line to the project-root `CLAUDE.md` (create the file if absent; keep any existing instructions):
 
 ```markdown
 @AGENTS.md
 ```
 
-Start a new Claude Code session and check `/context` to confirm `CLAUDE.md` is loaded. Other coding agents should use their supported repository-instruction mechanism; avoid duplicating the same rules.
+If you add the import to `.claude/CLAUDE.md` instead, use `@../AGENTS.md`, because imports resolve relative to the file that contains them. The same explicit import also works on older versions or in sessions where automatic loading is unavailable.
+
+Start a new Claude Code session and run `/context` to confirm `AGENTS.md` is listed under **Memory files**. Other coding agents should use their supported repository-instruction mechanism; avoid duplicating the same rules.
 
 ### 2. Add the optional Debugging Skill
 
-For Claude Code, from your **target project's root**, after checking out this repository locally:
+For Claude Code, clone this repository, then copy the skill from your **target project's root**:
 
 ```bash
+git clone https://github.com/kijepark/JEAR.git /path/to/JEAR
+cd /path/to/your-project
 mkdir -p .claude/skills/debugging
-cp /path/to/just-enough-ai-rules/skills/debugging/SKILL.md .claude/skills/debugging/SKILL.md
+cp /path/to/JEAR/skills/debugging/SKILL.md .claude/skills/debugging/SKILL.md
 ```
 
 The debugging skill builds on the core rules above. Use it for uncertain failures, not as an always-on procedure for routine implementation. For other agents, use their supported task-specific skill location.

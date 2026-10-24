@@ -74,21 +74,25 @@ JEAR의 목적은 모든 버그를 더 빠르게 해결한다고 보장하는 �
 
 `TODO:` 항목과 실제 테스트·린트 명령을 채웁니다. 기존 `AGENTS.md`가 있다면 **덮어쓰지 말고 합칩니다**. Debugging Skill이 참조하므로 `AGENTS.md`의 1~7절 번호는 유지합니다.
 
-**Claude Code:** `AGENTS.md`를 직접 자동 로딩하지 않으므로 대상 프로젝트의 `CLAUDE.md`에 다음 한 줄을 추가합니다. 파일이 없으면 생성하되, 기존 내용은 덮어쓰지 않습니다.
+**Claude Code:** v2.1.277 이상에서는 기본 설정상 프로젝트 또는 상위 경로에 `CLAUDE.md`, `.claude/CLAUDE.md`, `CLAUDE.local.md`가 없으면 `AGENTS.md`를 자동으로 읽습니다. 반면 이 파일 중 하나라도 있으면 기본적으로 `AGENTS.md` 대신 해당 Claude 지침 파일을 사용합니다. 이때는 프로젝트 루트의 `CLAUDE.md`에 다음 한 줄을 추가해 `AGENTS.md`를 가져옵니다. 파일이 없으면 생성하되, 기존 내용은 덮어쓰지 않습니다.
 
 ```markdown
 @AGENTS.md
 ```
 
-새 Claude Code 세션에서 `/context`를 실행해 `CLAUDE.md`가 로딩됐는지 확인합니다. 다른 코딩 에이전트는 해당 도구의 지침 연결 방법을 사용하며, 같은 규칙을 중복 복사하지 않습니다.
+`.claude/CLAUDE.md`에 추가할 때는 가져오기 경로가 그 파일을 기준으로 하므로 `@../AGENTS.md`를 사용합니다. 구버전이나 자동 로딩이 지원되지 않는 환경에서도 같은 가져오기 방식을 사용할 수 있습니다.
+
+새 Claude Code 세션에서 `/context`를 실행해 **Memory files** 목록에 `AGENTS.md`가 표시되는지 확인합니다. 다른 코딩 에이전트는 해당 도구의 지침 연결 방법을 사용하며, 같은 규칙을 중복 복사하지 않습니다.
 
 ### 2. Debugging Skill 추가(선택)
 
-Claude Code에서는 이 저장소를 로컬에 내려받은 후, **적용하려는 프로젝트 루트**에서 다음을 실행합니다.
+Claude Code에서는 이 저장소를 내려받은 뒤, **적용하려는 프로젝트 루트**에서 Skill 파일을 복사합니다.
 
 ```bash
+git clone https://github.com/kijepark/JEAR.git /path/to/JEAR
+cd /path/to/your-project
 mkdir -p .claude/skills/debugging
-cp /path/to/just-enough-ai-rules/skills/debugging/SKILL.md .claude/skills/debugging/SKILL.md
+cp /path/to/JEAR/skills/debugging/SKILL.md .claude/skills/debugging/SKILL.md
 ```
 
 이 Skill은 위 기본 규칙을 함께 사용하는 구조입니다. 원인이 불분명한 버그를 조사할 때 사용하고, 일상적인 기능 구현에 항상 적용하지는 않습니다. 다른 코딩 에이전트는 해당 도구의 작업별 Skill 경로를 사용합니다.
