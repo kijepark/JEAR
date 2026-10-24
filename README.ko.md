@@ -1,3 +1,5 @@
+![Just Enough AI Rules — 규칙은 적게, 결과는 더 좋게.](assets/banner-ko.webp)
+
 # Just Enough AI Rules (JEAR)
 
 **같은 버그를 반복해서 수정하는 횟수는 줄이고, 다음 수정의 근거는 분명하게.**

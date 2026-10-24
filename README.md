@@ -1,3 +1,5 @@
+![Just Enough AI Rules — Fewer Rules. Better Results.](assets/banner-en.webp)
+
 # Just Enough AI Rules (JEAR)
 
 **Fewer repeated debugging attempts. More evidence before the next fix.**
