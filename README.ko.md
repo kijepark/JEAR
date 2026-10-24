@@ -1,4 +1,8 @@
-![Just Enough AI Rules — 규칙은 적게, 결과는 더 좋게.](assets/banner-ko.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-ko-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-ko-light.png">
+  <img alt="Just Enough AI Rules — 규칙은 적게, 결과는 더 좋게." src="assets/banner-ko-light.png" width="700">
+</picture>
 
 # Just Enough AI Rules (JEAR)
 

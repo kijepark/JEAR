@@ -1,4 +1,8 @@
-![Just Enough AI Rules — Fewer Rules. Better Results.](assets/banner-en.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-en-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-en-light.png">
+  <img alt="Just Enough AI Rules — Fewer Rules. Better Results." src="assets/banner-en-light.png" width="700">
+</picture>
 
 # Just Enough AI Rules (JEAR)
 
