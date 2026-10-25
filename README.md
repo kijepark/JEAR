@@ -1,4 +1,4 @@
-<img alt="Just Enough AI Rules — Fewer Rules. Better Results." src="assets/banner-en-light.png#gh-light-mode-only" width="700"><img alt="Just Enough AI Rules — Fewer Rules. Better Results." src="assets/banner-en-dark.png#gh-dark-mode-only" width="700">
+<img alt="Just Enough AI Rules — Fewer Rules. Better Results." src="assets/banner-en-light.png#gh-light-mode-only" width="500"><img alt="Just Enough AI Rules — Fewer Rules. Better Results." src="assets/banner-en-dark.png#gh-dark-mode-only" width="500">
 
 # Just Enough AI Rules (JEAR)
 

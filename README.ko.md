@@ -1,4 +1,4 @@
-<img alt="Just Enough AI Rules — 규칙은 적게, 결과는 더 좋게." src="assets/banner-ko-light.png#gh-light-mode-only" width="700"><img alt="Just Enough AI Rules — 규칙은 적게, 결과는 더 좋게." src="assets/banner-ko-dark.png#gh-dark-mode-only" width="700">
+<img alt="Just Enough AI Rules — 규칙은 적게, 결과는 더 좋게." src="assets/banner-ko-light.png#gh-light-mode-only" width="500"><img alt="Just Enough AI Rules — 규칙은 적게, 결과는 더 좋게." src="assets/banner-ko-dark.png#gh-dark-mode-only" width="500">
 
 # Just Enough AI Rules (JEAR)
 
