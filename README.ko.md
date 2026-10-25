@@ -1,8 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-ko-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-ko-light.png">
-  <img alt="Just Enough AI Rules — 규칙은 적게, 결과는 더 좋게." src="assets/banner-ko-light.png" width="700">
-</picture>
+<img alt="Just Enough AI Rules — 규칙은 적게, 결과는 더 좋게." src="assets/banner-ko-light.png#gh-light-mode-only" width="700"><img alt="Just Enough AI Rules — 규칙은 적게, 결과는 더 좋게." src="assets/banner-ko-dark.png#gh-dark-mode-only" width="700">
 
 # Just Enough AI Rules (JEAR)
 

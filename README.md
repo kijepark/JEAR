@@ -1,8 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-en-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-en-light.png">
-  <img alt="Just Enough AI Rules — Fewer Rules. Better Results." src="assets/banner-en-light.png" width="700">
-</picture>
+<img alt="Just Enough AI Rules — Fewer Rules. Better Results." src="assets/banner-en-light.png#gh-light-mode-only" width="700"><img alt="Just Enough AI Rules — Fewer Rules. Better Results." src="assets/banner-en-dark.png#gh-dark-mode-only" width="700">
 
 # Just Enough AI Rules (JEAR)
 
